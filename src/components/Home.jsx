@@ -1,6 +1,9 @@
 import { Card, Col, Row, Container, Button } from "react-bootstrap"
+import { useNavigate } from "react-router-dom"
 
 const Home = () => {
+    const navigate = useNavigate()
+
     return (
         <Container className="mt-4">
         <Row>
@@ -13,32 +16,35 @@ const Home = () => {
         </Row>
         <Row>
           <Col md={4}>
-            <Card>
+            <Card className="text-center">
               <Card.Body>
                 <Card.Title>Ricerca</Card.Title>
                 <Card.Text>
                   Potrai ricercare "a mano" la città di cui ti interessa sapere il meteo e molte altre informazioni ovviamente.
                 </Card.Text>
+                <Button variant="outline-dark" onClick={() => navigate('/searching')}>apri finestra</Button>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card>
+            <Card className="text-center">
               <Card.Body>
                 <Card.Title>Curiosità</Card.Title>
                 <Card.Text>
                   Alcune città all'apparenza normali.. ma cliccando capirai qualcosa in più, magari una prossima vacanza futura, chissà..
                 </Card.Text>
+                <Button variant="outline-dark" onClick={() => navigate('/curiosities')}>apri finestra</Button>
               </Card.Body>
             </Card>
           </Col>
           <Col md={4}>
-            <Card>
+            <Card className="text-center">
               <Card.Body>
                 <Card.Title>Extra</Card.Title>
                 <Card.Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestias sequi nostrum? Perferendis voluptate temporibus facilis officiis dolores. Minus iste non in quia quo labore tempore id deserunt error praesentium!
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestias sequi nostrum? Perferendis voluptate temporibus
                 </Card.Text>
+                <Button variant="outline-dark">apri finestra</Button>
               </Card.Body>
             </Card>
           </Col>
