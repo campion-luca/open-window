@@ -39,7 +39,7 @@ const SearchLocation = ({ specMeteo }) => {
   };
 
 //   const showIf = () => {
-//     alert("ciao")
+//     
 //   }
 
   return (
