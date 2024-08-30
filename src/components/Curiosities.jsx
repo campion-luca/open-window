@@ -1,5 +1,4 @@
 import SearchLocation from "./SearchLocation";
-import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Form, Col } from "react-bootstrap";
 import { useState } from "react";

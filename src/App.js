@@ -6,7 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 
-const App = () => {
+function App() {
   return (
     <BrowserRouter>
       <header>
@@ -28,7 +28,7 @@ const App = () => {
         <Footer />
       </footer>
     </BrowserRouter>
-  );
-};
+  )
+}
 
-export default App;
+export default App
