@@ -5,6 +5,8 @@ import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
+import Home from "./components/Home"
+
 
 function App() {
   return (
@@ -14,7 +16,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path="/" element={<home />} />
+          <Route path="/" element={<Home />} />
 
           <Route path="/curiosities" element={<Curiosities />} />
 
@@ -23,6 +25,7 @@ function App() {
           {/* <Route path="/extra" element={<Da trovare se in tempo />} /> */}
         </Routes>
       </main>
+
 
       <footer>
         <Footer />

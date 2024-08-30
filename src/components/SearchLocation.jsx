@@ -6,6 +6,7 @@ const SearchLocation = ({specMeteo}) => {
 
     useEffect(() => {
         fetchSpecMeteo()
+// eslint-disable-next-line react-hooks/exhaustive-deps
 }, [specMeteo])
 
 const fetchSpecMeteo = () => {
