@@ -44,7 +44,7 @@ const Home = () => {
                 <Card.Text>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam molestias sequi nostrum? Perferendis voluptate temporibus
                 </Card.Text>
-                <Button variant="outline-dark">apri finestra</Button>
+                <Button variant="outline-dark" onClick={() => navigate('/extra')}>apri finestra</Button>
               </Card.Body>
             </Card>
           </Col>

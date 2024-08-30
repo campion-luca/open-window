@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Footer from "./components/Footer";
 import Home from "./components/Home"
+import Extra from "./components/Extra"
 
 function App() {
   return (
@@ -21,7 +22,7 @@ function App() {
 
           <Route path="/searching" element={<Search />} />
 
-          {/* <Route path="/extra" element={<Da trovare se in tempo />} /> */}
+          <Route path="/extra" element={<Extra />} />
         </Routes>
       </main>
 

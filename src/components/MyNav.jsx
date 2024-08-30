@@ -24,9 +24,9 @@ const MyNav = () => {
               Curiosità |
             </Link>
 
-            {/* <Link to="/extra" className="nav-link font-weight-bold">
-              soon |
-            </Link> */}
+            <Link to="/extra" className="nav-link font-weight-bold">
+              Extra |
+            </Link>
 
           </Nav>
         </Navbar.Collapse>
