@@ -4,7 +4,7 @@ import { Button, Card } from "react-bootstrap";
 const SearchLocation = ({ specMeteo }) => {
   const [meteo, setMeteo] = useState({});
   const [weather, setWeather] = useState([]);
-  const [wind, setWind] = useState();
+  const [wind, setWind] = useState({});
 
   useEffect(() => {
     fetchSpecMeteo();
@@ -28,7 +28,7 @@ const SearchLocation = ({ specMeteo }) => {
         setMeteo(meteo); // inserisco il risultato
 
         setWind(meteo.wind);
-        console.log("il vento ritorna PORCA MADONNA ---> ", wind.speed);
+        console.log("il vento ritorna ---> ", wind.speed);
 
         setWeather(meteo.weather[0]);
         console.log("weather da..", weather.main);
@@ -53,10 +53,13 @@ const SearchLocation = ({ specMeteo }) => {
           <h5>CLIMA</h5>
           il clima al momento è {weather.main} , per essere precisi {" "}
           {weather.description}
+
           <h5 className="mt-3">VENTO</h5>
           il vento al momento è forte {wind.speed}
+
         </Card.Text>
         <Button variant="outline-dark">apri la finestra sulla curiosità</Button>
+        {/* QUI AVREI DOVUTO METTERE LA FUNCTION CON QUALCHE CHICCA SUI POSTI SCELTI DA ME.. */}
       </Card.Body>
     </Card>
   );
