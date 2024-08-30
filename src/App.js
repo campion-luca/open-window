@@ -1,46 +1,33 @@
 import MyNav from "./components/MyNav";
-import SearchLocation from "./components/SearchLocation";
+import Curiosities from "./components/Curiosities";
+import Search from "./components/Search";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container, Row, Form, Col } from "react-bootstrap";
-import { useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
 
 const App = () => {
-  const [specMeteo, setSpecMeteo] = useState("");
-
   return (
-    <div>
-      <Container>
-        <header>
-          <MyNav />
-        </header>
+    <BrowserRouter>
+      <header>
+        <MyNav />
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<home />} />
 
-        <body>
+          <Route path="/curiosities" element={<Curiosities />} />
 
-        <Row className="justify-content-center mb-4">
-          <Col xs={12} md={8} lg={6}>
-            <h2 className="text-center">Ricerche veloci !</h2>
-            <Form.Select
-              aria-label="Default select example"
-              value={specMeteo}
-              onChange={(e) => {
-                setSpecMeteo(e.target.value)
-              }}
-            >
-              <option>Rovigo</option>
-              <option>Padova</option>
-              <option>Roma</option>
-              <option>Verona</option>
-              <option>Los Angeles</option>
-              <option>New York</option>
-            </Form.Select>
-          </Col>
-        </Row>
+          <Route path="/searching" element={<Search />} />
 
-          <SearchLocation specMeteo={specMeteo} />
-        </body>
-      </Container>
-    </div>
+          {/* <Route path="/extra" element={<Da trovare se in tempo />} /> */}
+        </Routes>
+      </main>
+
+      <footer>
+        <Footer />
+      </footer>
+    </BrowserRouter>
   );
 };
 
