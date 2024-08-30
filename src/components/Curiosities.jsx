@@ -29,6 +29,7 @@ const Curiosities = () => {
         </Form.Select>
       </Col>
     </Row> 
+    
      <SearchLocation specMeteo={specMeteo} />
 
 

@@ -27,11 +27,11 @@ const SearchLocation = ({ specMeteo }) => {
         console.log("risultato fetch tornato", meteo);
         setMeteo(meteo); // inserisco il risultato
 
+        setWind(meteo.wind);
+        console.log("il vento ritorna PORCA MADONNA ---> ", wind.speed);
+
         setWeather(meteo.weather[0]);
         console.log("weather da..", weather.main);
-
-        setWind(meteo.wind);
-        console.log("il vento ritorna..", wind.speed);
       })
       .catch((err) => {
         console.log("ERRORE di tipo", err);
@@ -39,7 +39,7 @@ const SearchLocation = ({ specMeteo }) => {
   };
 
 //   const showIf = () => {
-//     
+//     {specMeteo} === 
 //   }
 
   return (
@@ -51,7 +51,7 @@ const SearchLocation = ({ specMeteo }) => {
         </Card.Title>
         <Card.Text>
           <h5>CLIMA</h5>
-          il clima al momento è {weather.main} , per essere precisi{" "}
+          il clima al momento è {weather.main} , per essere precisi {" "}
           {weather.description}
           <h5 className="mt-3">VENTO</h5>
           il vento al momento è forte {wind.speed}
